@@ -1,1 +1,16 @@
-<p>table works!</p>
+<table class="ui celled table">
+    <thead>
+        <tr>
+            <th *ngFor="let head of headers">
+                {{head.label}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of data">
+            <td *ngFor="let head of headers">
+                {{r[head.key]}}
+            </td>
+        </tr>
+    </tbody>
+</table>
