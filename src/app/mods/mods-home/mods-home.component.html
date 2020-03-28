@@ -1,0 +1,15 @@
+<app-divider>Modal</app-divider>
+
+<div>
+    <button class="ui button" (click)="onClick()">Open</button>
+</div>
+<app-modal *ngIf="showModal" (close)="onClick()">
+  <div modalTitle>I am a reusable Title</div>
+  <p>
+    I am a reUsable modal window!
+  </p>
+</app-modal>
+
+
+<app-divider>Accordian</app-divider>
+<app-accordian [items]="items"></app-accordian>
